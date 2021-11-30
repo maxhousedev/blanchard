@@ -1,0 +1,14 @@
+# node_modules directory
+node_modules/
+node_modules
+# IDE specific files
+/.vscode
+# git specific files
+/.git
+
+# libs
+/src/libs/
+
+# concated files
+/src/js/template.js
+/src/js/module.js

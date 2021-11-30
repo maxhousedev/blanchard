@@ -1,0 +1,128 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: 132px;
+  background-color: #000;
+
+  @include mq("phone-wide") {
+    min-height: 145px;
+  }
+
+  @include mq("laptop") {
+    min-height: 140px;
+  }
+}
+
+.footer-container {
+  @include border-box;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+
+  @include mq("phone-wide") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  @include mq("laptop") {
+    max-width: 1700px;
+    padding: 0 50px;
+  }
+}
+
+.footer-logo {
+  flex: 0 0 22px;
+  max-width: 97px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @include mq("phone-wide") {
+    flex: 0 0 173px;
+    max-width: none;
+    max-height: 40px;
+  }
+
+  &:focus {
+    outline: 2px solid $color-focus;
+  }
+}
+
+.footer-social {
+  flex: 0 0 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+
+  @include mq("phone-wide") {
+    flex: 0 0 240px;
+    width: auto;
+  }
+
+  @include mq("laptop") {
+    flex: 0 0 175px;
+  }
+}
+
+.footer-social__link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq("phone-wide") {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include mq("laptop") {
+    width: 45px;
+    height: 45px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $color-focus;
+  }
+  &:active {
+    border: 2px solid #d1a9f0;
+  }
+}
+.footer-social__link_vk {
+  background-image: url("/svg/vk.svg");
+
+  &:hover {
+    background-image: url("/svg/vk_hover.svg");
+  }
+  &:active {
+    background-image: url("/svg/vk_active.svg");
+  }
+}
+.footer-social__link_in {
+  background-image: url("/svg/instagram.svg");
+
+  &:hover {
+    background-image: url("/svg/instagram_hover.svg");
+  }
+  &:active {
+    background-image: url("/svg/instagram_active.svg");
+  }
+}
+.footer-social__link_fb {
+  background-image: url("/svg/fb.svg");
+
+  &:hover {
+    background-image: url("/svg/fb_hover.svg");
+  }
+  &:active {
+    background-image: url("/svg/fb_active.svg");
+  }
+}

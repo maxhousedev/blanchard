@@ -1,0 +1,15 @@
+// @function calcIndent($minIndent, $maxIndent, $minVW, $maxVW) {
+//   $indent: $minIndent + ($maxIndent - $minIndent) * (100vw - $minVW) / ($maxVW - $minVW);
+
+//   $indent: 100vw;
+
+//   // @if ($indent < $minIndent) {
+//   //   $indent: $minIndent;
+//   // } @else if ($indent > $minIndent) {
+//   //   $indent: $maxIndent;
+//   // }
+
+//   @return $indent;
+// }
+
+// // padding-right: calc(90 * (100vw - 1200px) / (1920 - 1200));

@@ -1,0 +1,11 @@
+{
+  "env": { "browser": true, "es6": true, "node": true },
+  "extends": ["airbnb/base", "prettier"],
+
+  "rules": {
+    "no-plusplus": "off",
+    "no-unused-vars": "warn",
+    "no-param-reassign": ["error", { "props": false }],
+    "quotes": ["error", "single", { "avoidEscape": true }]
+  }
+}

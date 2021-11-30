@@ -1,0 +1,55 @@
+.accordionjs {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.accordionjs .acc_section {
+  position: relative;
+  z-index: 10;
+  margin-top: -1px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordionjs .acc_section .acc_head {
+  position: relative;
+  padding: 22px 0;
+  display: block;
+  cursor: pointer;
+}
+
+.accordionjs .acc_section .acc_head {
+  & h3 {
+    margin: 5px 0;
+  }
+  .accordionjs .acc_section .acc_content {
+    padding: 10px 0;
+  }
+}
+
+// .accordionjs .acc_section:first-of-type,
+// .accordionjs .acc_section.acc_active {
+//   border-top: 1px solid #ccc;
+// }
+
+// .accordionjs .acc_section:not(:first-of-type) {
+//   border-top: 1px solid #ccc;
+// }
+// .accordionjs .acc_section:last-of-type,
+// .accordionjs .acc_section:last-of-type .acc_content {
+//   border-bottom-left-radius: 3px;
+//   border-bottom-right-radius: 3px;
+// }
+
+.accordionjs .acc_section.acc_active > .acc_content {
+  display: block;
+  border-top: 1px solid $color-main-theme;
+  border-bottom: 1px solid $color-main-theme;
+}
+// .accordionjs .acc_section.acc_active > .acc_head {
+//   background: #f9f9f9;
+//   border-bottom: 1px solid #ccc;
+// }

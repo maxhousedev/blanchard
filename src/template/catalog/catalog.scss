@@ -1,0 +1,308 @@
+.catalog {
+  padding-top: 85px;
+
+  @include mq("tablet") {
+    min-height: 1250px;
+  }
+}
+
+.catalog-container {
+  @include mq("phone-wide") {
+    position: relative;
+  }
+}
+
+.catalog__description {
+  display: none;
+
+  @include mq("phone-wide") {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+.country-menu-list {
+  margin: 13px -5px 0 -5px;
+
+  @include mq("phone-wide") {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    margin: 0;
+  }
+
+  @include mq("tablet") {
+    left: 26vw;
+    right: auto;
+  }
+
+  @include mq("laptop") {
+    left: 270px;
+  }
+}
+
+.country-menu__item {
+  $country-item-width: 40px;
+  width: $country-item-width;
+  height: $country-item-width;
+  &:not(:first-child) {
+    margin-left: 25px;
+  }
+  &:focus,
+  &:focus-within,
+  &:hover,
+  &.active {
+    outline: none;
+  }
+
+  @include mq("phone-wide") {
+    $country-item-width: 55px;
+    width: $country-item-width;
+    height: $country-item-width;
+    &:not(:first-child) {
+      margin-left: 45px;
+    }
+  }
+
+  @include mq("tablet") {
+    &:not(:first-child) {
+      margin-left: 42px;
+    }
+  }
+}
+
+.country-menu__btn {
+  position: relative;
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid transparent;
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    box-shadow: 0px 0px 20px 0px rgba(157, 92, 208, 0.75);
+  }
+  &:active {
+    border: 2px solid $color-main-theme;
+  }
+  &.is_active {
+    &::after {
+      @include pseudo;
+      top: -15%;
+      left: -13%;
+      width: 130%;
+      height: 130%;
+      border-radius: 50%;
+      border: 2px solid $color-main-theme;
+    }
+  }
+  & img {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+  }
+
+  @include mq("tablet") {
+    transform: translate(0, 4px);
+  }
+
+  @include mq("laptop") {
+    &:hover {
+      outline: none;
+      box-shadow: 0px 0px 20px 0px rgba(157, 92, 208, 0.75);
+    }
+  }
+}
+
+.tab-content {
+  @include mq("tablet") {
+    width: 47%;
+    margin: 40px 0 0 auto;
+  }
+
+  @include mq("laptop") {
+    width: 50%;
+  }
+}
+
+.accordionjs {
+  & > .accordion__item.acc_section {
+    & > .acc_head {
+      @include mq("phone-wide") {
+        padding: 40px 0;
+      }
+
+      & > h3.accordion__header {
+        font-size: 1.8em;
+        line-height: 1;
+
+        @include mq("phone-wide") {
+          font-size: 2.4em;
+        }
+      }
+
+      &::after {
+        $acc_head-h3-after-width: 30px;
+        @include pseudo;
+        top: calc(50% - 15px);
+        right: 0;
+        width: $acc_head-h3-after-width;
+        height: $acc_head-h3-after-width;
+        border-radius: 50%;
+        background: #ececec url("../svg/arrow-down_black.svg") center / 10px 10px no-repeat;
+        // background-color: #ececec;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: 10px 10px;
+        // background-image: url("../svg/arrow-down_black.svg");
+        transition: transform 200ms ease-in-out;
+
+        @include mq("phone-wide") {
+          top: calc(50% - 25px);
+          $acc_head-h3-after-width: 50px;
+          width: $acc_head-h3-after-width;
+          height: $acc_head-h3-after-width;
+        }
+
+        @include mq("tablet") {
+          background-size: 20px;
+        }
+      }
+    }
+    &.acc_active {
+      & > .acc_head {
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: 2px solid $color-main-theme;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.painter-list {
+  @include border-box;
+  padding: 20px 0;
+
+  @include mq("phone-wide") {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 345px;
+    padding: 27px 0;
+  }
+
+  @include mq("tablet") {
+    max-height: 440px;
+    padding: 26px 0;
+  }
+
+  @include mq("laptop") {
+    max-height: 370px;
+  }
+}
+
+.painter__item {
+  @include border-box;
+  padding: 5px 0;
+  margin: 0;
+  border: 2px solid transparent;
+
+  &:focus,
+  &:focus-within {
+    border: 2px solid $color-focus;
+  }
+
+  @include mq("phone-wide") {
+    width: 30%;
+    margin: 0 40px 0 0;
+    padding: 5px 0;
+  }
+
+  @include mq("tablet") {
+    width: 47%;
+    margin: 0 25px 0 0;
+  }
+
+  @include mq("laptop") {
+    width: 30%;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.painter__link {
+  font-size: 1.6em;
+  color: #333;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $color-main-theme;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color-active;
+    text-decoration: none;
+  }
+}
+
+.painter-output {
+  margin: 55px 0 0 0;
+
+  @include mq("phone-wide") {
+    margin: 45px 0 0 0;
+  }
+
+  @include mq("tablet") {
+    position: absolute;
+    top: 245px;
+    width: 43%;
+    margin: 0;
+  }
+
+  @include mq("laptop") {
+    width: 44%;
+  }
+}
+
+.painter-output__img {
+  object-fit: cover;
+
+  @include mq("laptop") {
+    max-height: 470px;
+    object-fit: contain;
+  }
+}
+
+.painter-output__header {
+  margin-bottom: 0.7em;
+  font-size: 2.4em;
+  font-weight: 600;
+  line-height: 1;
+
+  @include mq("phone-wide") {
+    margin: 35px 0 15px 0;
+  }
+}
+
+.painter-output__years {
+  color: #999;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.painter-output__description {
+  margin: 0.5em 0;
+  font-size: 1.6em;
+  line-height: 2;
+}

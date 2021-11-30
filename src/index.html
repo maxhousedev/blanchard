@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- preload fonts  -->
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-600.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-800.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/open-sans-v18-latin_cyrillic-800.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/styles.min.css" />
+  </head>
+
+  <body>
+    <!-- header top -->
+    @@include("./template/header/header-top/header-top.html")
+    <!-- header bottom -->
+    @@include("./template/header/header-bottom/header-bottom.html")
+
+    <main>
+      <!-- section hero  -->
+      @@include("./template/hero/hero.html")
+      <!-- section about us  -->
+      @@include("./template/about_us/about_us.html")
+      <!-- section gallery  -->
+      @@include("./template/gallery/gallery.html")
+      <!-- section catalog  -->
+      @@include("./template/catalog/catalog.html")
+      <!-- section events  -->
+      @@include("./template/events/events.html")
+      <!-- section publications  -->
+      @@include("./template/publications/publications.html")
+      <!-- section projects  -->
+      @@include("./template/projects/projects.html")
+      <!-- section contacts  -->
+      @@include("./template/contacts/contacts.html")
+    </main>
+
+    <!-- footer  -->
+    @@include("./template/footer/footer.html")
+
+    <!-- js -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="/js/libs.js"></script>
+    <script src="/js/app.min.js"></script>
+  </body>
+</html>

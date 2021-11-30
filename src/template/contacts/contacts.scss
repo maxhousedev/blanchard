@@ -1,0 +1,293 @@
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 27px;
+
+  @include mq("phone-wide") {
+    position: relative;
+    padding-top: 45px;
+    height: 825px;
+  }
+
+  @include mq("tablet") {
+    padding-top: 50px;
+  }
+
+  @include mq("laptop") {
+    max-width: 1700px;
+    height: 825px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+}
+
+.contacts-title,
+.contacts-subtitle,
+.contacts__address {
+  margin-left: 15px;
+}
+
+.contacts-title {
+  @extend .section-title;
+
+  @include mq("phone-wide") {
+    margin-left: 50px;
+  }
+}
+
+.contacts-subtitle,
+.contacts__address,
+.contacts__header_to-social,
+.contacts__social_whatsapp,
+.contacts-form {
+  @include mq("phone-wide") {
+    position: absolute;
+    left: 50px;
+    margin: 0;
+  }
+}
+
+.contacts-subtitle {
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.6em;
+  font-weight: 600;
+
+  @include mq("phone-wide") {
+    top: 247px;
+    font-size: 2.4em;
+    font-weight: 600;
+  }
+
+  @include mq("tablet") {
+    top: 252px;
+  }
+
+  @include mq("laptop") {
+    top: 246px;
+  }
+}
+
+.contacts__address {
+  font-size: 1.4em;
+  font-style: normal;
+
+  @include mq("phone-wide") {
+    top: 288px;
+    font-size: 1.6em;
+  }
+
+  @include mq("tablet") {
+    top: 293px;
+  }
+
+  @include mq("laptop") {
+    top: 286px;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 320px;
+  margin: 20px auto;
+  [class*="ground-pane"] {
+    filter: grayscale(1);
+  }
+
+  @include mq("phone-wide") {
+    position: absolute;
+    top: 122px;
+    right: 0;
+    width: 44vw;
+    height: 700px;
+    margin: 0;
+  }
+
+  @include mq("laptop") {
+    width: 67%;
+  }
+}
+
+.contacts-form {
+  @include border-box;
+  width: 290px;
+  min-height: 210px;
+  margin: 27px auto 10px 15px;
+
+  @include mq("phone-wide") {
+    top: 345px;
+    width: 335px;
+  }
+
+  @include mq("laptop") {
+    top: 341px;
+    width: 400px;
+  }
+}
+
+.contacts-form__fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.contacts-form__legend {
+  font-size: 1.8em;
+
+  @include mq("phone-wide") {
+    font-size: 2.4em;
+  }
+}
+
+.contacts-form__input {
+  align-self: stretch;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.6em;
+
+  &:focus {
+    outline-color: $color-focus;
+    outline-offset: 3px;
+  }
+}
+
+.input_name {
+  margin: 20px 0;
+
+  @include mq("phone-wide") {
+    margin: 15px 0 19px 0;
+  }
+
+  @include mq("tablet") {
+    margin: 20px 0;
+  }
+}
+
+.input_tel {
+  margin: 0 0 19px 0;
+
+  @include mq("phone-wide") {
+    margin: 0 0 23px 0;
+  }
+
+  @include mq("tablet") {
+    margin: 0 0 22px 0;
+  }
+}
+
+.сontacts-form__btn_submit {
+  position: relative;
+  padding: 10px 35px;
+  border-radius: 30px;
+  color: $color-main-theme;
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: 600;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+  &:active {
+    color: #fff;
+    background-color: $color-active;
+    border: 2px solid #d1a9f0;
+  }
+  &:focus {
+    &::after {
+      @include pseudo;
+      width: 110%;
+      height: 135%;
+      top: -5.5px;
+      left: -6px;
+      border-radius: 40px;
+      border: 2px solid $color-hover;
+    }
+  }
+
+  @include mq("phone-wide") {
+    font-size: 1.8em;
+    padding: 18px 35px;
+  }
+
+  @include mq("laptop") {
+    &:hover {
+      color: #fff;
+      background-color: $color-main-theme;
+      border: 2px solid $color-main-theme;
+    }
+  }
+}
+
+.js-validate-error-label {
+  margin: -1em 0 0 0;
+  font-size: 0.75em;
+  transform: translateY(-64px);
+}
+
+.contacts__header_to-social {
+  margin: 20px 0 15px 15px;
+  @extend .contacts-form__legend;
+  font-weight: 400;
+
+  @include mq("phone-wide") {
+    bottom: 185px;
+  }
+
+  @include mq("tablet") {
+    bottom: 178px;
+  }
+
+  @include mq("laptop") {
+    bottom: 182px;
+  }
+}
+
+.contacts__social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq("phone-wide") {
+    bottom: 108px;
+    width: 60px;
+    height: 60px;
+  }
+
+  @include mq("tablet") {
+    bottom: 100px;
+  }
+
+  @include mq("laptop") {
+    bottom: 125px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.contacts__social_whatsapp {
+  margin: 0 15px 0 15px;
+  background-image: url("/svg/whatsapp.svg");
+}
+
+.contacts__social_telegram {
+  background-image: url("/svg/telegram.svg");
+
+  @include mq("phone-wide") {
+    position: absolute;
+    left: 140px;
+  }
+
+  @include mq("laptop") {
+    left: 110px;
+  }
+}
